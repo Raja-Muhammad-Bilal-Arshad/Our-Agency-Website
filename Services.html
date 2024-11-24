@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Services Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(1, 1, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 130px;
+            background-color: rgb(23, 22, 22);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            transition: 0.3s;
+        }
+        nav ul li:hover {
+            transform: translateY(-10px);
+        }
+        .rightmost {
+            list-style: none;
+            margin: 0 23px;
+            text-decoration: none;
+            color: white;
+            margin-left: 150px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            transform: translateY(-100px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            background-color: rgba(200, 100, 150, 0.8);
+            font-size: 1.4rem;
+        }
+        
+        hr  {
+            width: 65%;
+            border: 2px solid rgb(28, 129, 218);
+            margin: auto;
+        }
+
+        footer{
+            margin-top: 50px;
+            background-color: rgb(18, 23, 31);
+        }
+        .footer{
+            display: flex;
+            padding: 40px 122px;
+            justify-content: space-evenly;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer div{
+            width: 223px;
+        }
+        footer .footer-rights{
+            text-align: center ;
+          color:  gray;
+          padding: 12px 0px;
+        }
+        .footer a{
+             color: rgb(253, 252, 252);
+
+        }
+        .footer a:hover{
+            transform: translateX(30px);
+            color: rgb(253, 252, 252);
+            background-color: rgb(23, 7, 87);
+            border-color: black;
+             
+        }
+        .services-section {
+            margin-bottom: 30px;
+            padding: 10px 50px;
+            text-align: center;
+        }
+        .service {
+            height: 215px;
+            display: flex;
+            align-items: stretch; /* Make items stretch to the full height */
+            background-color: rgba(0, 0, 0, 0.636);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 0px;
+            margin-bottom: 0px;
+            margin: 20px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .service:hover {
+            transform: translateY(-15px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .service .text {
+            padding-top: 35px;
+            margin-bottom: 250px;
+            flex: 1; /* Allow the text to take up space */
+            padding-right: 10px; /* Adjust padding as needed */
+        }
+        .service .image {
+            padding-top: 0px;
+            flex: 1; /* This will allow the image to take up more space */
+            background-size: cover;
+            background-position: center;
+            height: 200px; /* Keep the height */
+            border-radius: 10px;
+        }
+        .diagonal-line {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin-left: 35px;
+            background-color: transparent;
+            border-left: 5px solid rgb(28, 129, 218);
+            transform: skew(-20deg);
+            left: 50%;
+            top: 0;
+            z-index: 1; /* Ensure it is above the image */
+            pointer-events: none; /* Prevent mouse events on the line */
+        }
+        .btn-shop-now {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-shop-now:hover {
+            background-color: rgba(133, 193, 245, 0.855);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="left">
+            <h1>My Logo</h1>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/services">SERVICES</a></li>
+                <li><a href="/">REVIEWS</a></li>
+                <li><a href="/">PORTFOLIO</a></li>
+                <li><a href="/">PROJECT</a></li>
+                <li><div class="rightmost"><a href="/">CONTACT</a></div></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="services-section">
+        <h1>Our Services</h1>
+        <p>We offer a wide range of services to help you achieve your goals.</p>
+        <div class="service">
+            <div class="text">
+                <h2>Full Stack Development</h2>
+                <p>Transform your vision into a stunning, user-friendly website.</p>
+                <button class="btn-shop-now">Shop Now</button>
+                <div class="diagonal-line"></div>
+            </div>
+            
+            <div class="image" style="background-image: url('GOKU.png');"></div> <!-- Adjust the path as needed -->
+        </div>
+        <div class="service">
+            <div class="text">
+                <h2>Mobile App Development</h2>
+                <p>Create a seamless mobile experience that keeps users engaged.</p>
+                <button class="btn-shop-now">Shop Now</button>
+            </div>
+            <div class="diagonal-line"></div>
+            <div class="image" style="background-image: url('GOKU.png');"></div> <!-- Replace with your image path -->
+        </div>
+        <div class="service">
+            <div class="text">
+                <h2>UI/UX Design</h2>
+                <p>Craft visually stunning, user-friendly interfaces.</p>
+                <button class="btn-shop-now">Shop Now</button>
+            </div>
+            <div class="diagonal-line"></div>
+            <div class="image" style="background-image: url('GOKU.png');"></div> <!-- Replace with your image path -->
+        </div>
+        <div class="service">
+            <div class="text">
+                <h2>SEO & Digital Marketing</h2>
+                <p>Boost your online visibility and drive traffic to your website.</p>
+                <button class="btn-shop-now">Shop Now</button>
+            </div>
+            <div class="diagonal-line"></div>
+            <div class="image" style="background-image: url('GOKU.png');"></div> <!-- Replace with your image path -->
+        </div>
+    </section>
+</main>
+<hr>
+<footer>
+    <div class="footer">
+        <div class="footer-first">
+            <h3>Team's Portfolio</h3><br>
+            <ul>
+                <li><a href="/">BILAL ARSHAD</a></li>
+                <li><a href="/">MOHSIN SHOHAIB</a></li>
+                <li><a href="/">ABDULLAH SAEED</a></li>
+        </div>                                                              
+        <div class="footer-second">
+            <h3>BROWSE</h3><br>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/">ABOUT</a></li>
+                <li><a href="/">SERVICES</a></li>
+                <li><a href="/">CONTACT</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-third">
+            <h3>Follow Us</h3><br>
+            <ul>
+                <li><a href="/">LINKEDIN</a></li>
+                <li><a href="/">INSTAGRAM</a></li>
+                <li><a href="/">LINKTREE</a></li>
+                <li><a href="/">LEETCODE</li>
+                <li><a href="/">GITHUB</a></li>
+            </ul>
+        </div>
+        <div class="footer-fouth">
+            <h3>CONTACT US</h3><br>
+            <ul>
+                <li><a href="/">GMAIL</a></li>
+                <li><a href="/">HOTMAIL</a></li>
+                <li><a href="/">WHATSAPP</a></li>
+                <li><a href="/">DISCORD</a></li>
+                <li><a href="/">GITHUB</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-rights">
+        Colyright &#169TeamALPHA.com All right are reserved
+    </div>
+</footer>
+</body>
+</html>
